@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="620.0"
+            prefWidth="850.0"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.paqueteria.controller.RastreoPaqueteController">
+
+    <children>
+
+        <Label layoutX="280.0"
+               layoutY="20.0"
+               text="RASTREO DEL PAQUETE">
+            <font>
+                <Font name="System Bold" size="25.0"/>
+            </font>
+        </Label>
+
+        <Label layoutX="45.0" layoutY="85.0" text="Código:"/>
+        <Label fx:id="lblCodigo"
+               layoutX="160.0"
+               layoutY="85.0"
+               text="-"/>
+
+        <Label layoutX="45.0" layoutY="120.0" text="Destinatario:"/>
+        <Label fx:id="lblDestinatario"
+               layoutX="160.0"
+               layoutY="120.0"
+               text="-"/>
+
+        <Label layoutX="45.0" layoutY="155.0" text="Teléfono:"/>
+        <Label fx:id="lblTelefono"
+               layoutX="160.0"
+               layoutY="155.0"
+               text="-"/>
+
+        <Label layoutX="45.0" layoutY="190.0" text="Origen:"/>
+        <Label fx:id="lblOrigen"
+               layoutX="160.0"
+               layoutY="190.0"
+               text="-"/>
+
+        <Label layoutX="440.0" layoutY="85.0" text="Destino:"/>
+        <Label fx:id="lblDestino"
+               layoutX="550.0"
+               layoutY="85.0"
+               text="-"/>
+
+        <Label layoutX="440.0" layoutY="120.0" text="Estado actual:"/>
+        <Label fx:id="lblEstado"
+               layoutX="550.0"
+               layoutY="120.0"
+               text="-"/>
+
+        <Label layoutX="440.0" layoutY="155.0" text="Tipo de envío:"/>
+        <Label fx:id="lblTipoEnvio"
+               layoutX="550.0"
+               layoutY="155.0"
+               text="-"/>
+
+        <Label layoutX="440.0" layoutY="190.0" text="Repartidor:"/>
+        <Label fx:id="lblRepartidor"
+               layoutX="550.0"
+               layoutY="190.0"
+               text="-"/>
+
+        <Separator layoutX="35.0"
+                   layoutY="235.0"
+                   prefWidth="780.0"/>
+
+        <Label layoutX="45.0"
+               layoutY="255.0"
+               text="HISTORIAL DE ESTADOS">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Label>
+
+        <TableView fx:id="tablaHistorial"
+                   layoutX="35.0"
+                   layoutY="295.0"
+                   prefWidth="780.0"
+                   prefHeight="260.0">
+
+            <columns>
+
+                <TableColumn fx:id="colEstado"
+                             text="Estado"
+                             prefWidth="200.0"/>
+
+                <TableColumn fx:id="colFecha"
+                             text="Fecha"
+                             prefWidth="210.0"/>
+
+                <TableColumn fx:id="colObservacion"
+                             text="Observación"
+                             prefWidth="365.0"/>
+
+            </columns>
+
+        </TableView>
+
+        <Button layoutX="365.0"
+                layoutY="575.0"
+                prefWidth="120.0"
+                text="Cerrar"
+                onAction="#cerrarVentana"/>
+
+    </children>
+
+</AnchorPane>

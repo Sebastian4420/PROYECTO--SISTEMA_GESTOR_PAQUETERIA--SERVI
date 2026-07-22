@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="596.0"
+            prefWidth="700.0"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.paqueteria.controller.ClienteController">
+
+    <children>
+
+        <Label layoutX="210.0" layoutY="25.0" text="GESTIÓN DE CLIENTES">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Label>
+
+        <!-- CÉDULA -->
+
+        <Label layoutX="55.0" layoutY="85.0" text="Cédula:"/>
+
+        <TextField fx:id="txtCedula"
+                   layoutX="55.0"
+                   layoutY="105.0"
+                   prefWidth="170.0"/>
+
+        <!-- NOMBRES -->
+
+        <Label layoutX="260.0" layoutY="85.0" text="Nombres:"/>
+
+        <TextField fx:id="txtNombre"
+                   layoutX="260.0"
+                   layoutY="105.0"
+                   prefWidth="170.0"/>
+
+        <!-- APELLIDOS -->
+
+        <Label layoutX="460.0" layoutY="85.0" text="Apellidos:"/>
+
+        <TextField fx:id="txtApellido"
+                   layoutX="460.0"
+                   layoutY="105.0"
+                   prefWidth="170.0"/>
+
+        <!-- TELÉFONO -->
+
+        <Label layoutX="55.0" layoutY="155.0" text="Teléfono:"/>
+
+        <TextField fx:id="txtTelefono"
+                   layoutX="55.0"
+                   layoutY="175.0"
+                   prefWidth="170.0"/>
+
+        <!-- CORREO -->
+
+        <Label layoutX="260.0" layoutY="155.0" text="Correo:"/>
+
+        <TextField fx:id="txtCorreo"
+                   layoutX="260.0"
+                   layoutY="175.0"
+                   prefWidth="170.0"/>
+
+        <!-- DIRECCIÓN -->
+
+        <Label layoutX="460.0" layoutY="155.0" text="Dirección:"/>
+
+        <TextField fx:id="txtDireccion"
+                   layoutX="460.0"
+                   layoutY="175.0"
+                   prefWidth="170.0"/>
+
+        <!-- BOTONES -->
+
+        <Button fx:id="btnGuardar"
+                text="Guardar"
+                layoutX="90.0"
+                layoutY="240.0"
+                prefWidth="110.0"
+                onAction="#guardarCliente"/>
+
+        <Button fx:id="btnActualizar"
+                text="Actualizar"
+                layoutX="220.0"
+                layoutY="240.0"
+                prefWidth="110.0"
+                onAction="#actualizarCliente"/>
+
+        <Button fx:id="btnEliminar"
+                text="Eliminar"
+                layoutX="350.0"
+                layoutY="240.0"
+                prefWidth="110.0"
+                onAction="#eliminarCliente"/>
+
+        <Button fx:id="btnLimpiar"
+                text="Limpiar"
+                layoutX="480.0"
+                layoutY="240.0"
+                prefWidth="110.0"
+                onAction="#limpiarCampos"/>
+
+        <Separator layoutX="35.0"
+                   layoutY="300.0"
+                   prefWidth="620.0"/>
+
+        <!-- TABLA -->
+
+        <TableView fx:id="tablaClientes"
+                   layoutX="35.0"
+                   layoutY="320.0"
+                   prefHeight="245.0"
+                   prefWidth="620.0">
+
+            <columns>
+
+                <TableColumn fx:id="colId"
+                             text="ID"
+                             prefWidth="45"/>
+
+                <TableColumn fx:id="colCedula"
+                             text="Cédula"
+                             prefWidth="90"/>
+
+                <TableColumn fx:id="colNombre"
+                             text="Nombres"
+                             prefWidth="120"/>
+
+                <TableColumn fx:id="colApellido"
+                             text="Apellidos"
+                             prefWidth="120"/>
+
+                <TableColumn fx:id="colTelefono"
+                             text="Teléfono"
+                             prefWidth="90"/>
+
+                <TableColumn fx:id="colCorreo"
+                             text="Correo"
+                             prefWidth="120"/>
+
+                <TableColumn fx:id="colDireccion"
+                             text="Dirección"
+                             prefWidth="150"/>
+
+            </columns>
+
+        </TableView>
+
+    </children>
+
+</AnchorPane>

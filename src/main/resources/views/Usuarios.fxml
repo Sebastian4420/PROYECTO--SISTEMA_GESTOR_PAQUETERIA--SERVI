@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0"
+            prefWidth="720.0"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.paqueteria.controller.UsuarioController">
+
+    <children>
+
+        <Label
+                layoutX="230.0"
+                layoutY="20.0"
+                text="GESTIÓN DE USUARIOS">
+
+            <font>
+                <Font size="24"/>
+            </font>
+
+        </Label>
+
+        <!-- DATOS -->
+
+        <Label
+                layoutX="60"
+                layoutY="80"
+                text="Usuario"/>
+
+        <TextField
+                fx:id="txtUsuario"
+                layoutX="60"
+                layoutY="100"
+                prefWidth="220"/>
+
+        <Label
+                layoutX="360"
+                layoutY="80"
+                text="Contraseña"/>
+
+        <PasswordField
+                fx:id="txtPassword"
+                layoutX="360"
+                layoutY="100"
+                prefWidth="220"/>
+
+        <Label
+                layoutX="60"
+                layoutY="170"
+                text="Rol"/>
+
+        <ComboBox
+                fx:id="cbRol"
+                layoutX="60"
+                layoutY="190"
+                prefWidth="220"/>
+
+        <Label
+                layoutX="360"
+                layoutY="170"
+                text="Estado"/>
+
+        <ComboBox
+                fx:id="cbEstado"
+                layoutX="360"
+                layoutY="190"
+                prefWidth="220"/>
+
+        <!-- BOTONES -->
+
+        <Button
+                fx:id="btnGuardar"
+                text="Guardar"
+                layoutX="60"
+                layoutY="270"
+                prefWidth="120"
+                onAction="#guardarUsuario"/>
+
+        <Button
+                fx:id="btnActualizar"
+                text="Actualizar"
+                layoutX="210"
+                layoutY="270"
+                prefWidth="120"
+                onAction="#actualizarUsuario"/>
+
+        <Button
+                fx:id="btnEliminar"
+                text="Eliminar"
+                layoutX="360"
+                layoutY="270"
+                prefWidth="120"
+                onAction="#eliminarUsuario"/>
+
+        <Button
+                fx:id="btnLimpiar"
+                text="Limpiar"
+                layoutX="510"
+                layoutY="270"
+                prefWidth="120"
+                onAction="#limpiarCampos"/>
+
+        <Separator
+                layoutX="40"
+                layoutY="330"
+                prefWidth="640"/>
+
+        <!-- TABLA -->
+
+        <TableView
+                fx:id="tablaUsuarios"
+                layoutX="40"
+                layoutY="350"
+                prefWidth="640"
+                prefHeight="220">
+
+            <columns>
+
+                <TableColumn
+                        fx:id="colId"
+                        text="ID"
+                        prefWidth="60"/>
+
+                <TableColumn
+                        fx:id="colUsuario"
+                        text="Usuario"
+                        prefWidth="180"/>
+
+                <TableColumn
+                        fx:id="colRol"
+                        text="Rol"
+                        prefWidth="180"/>
+                <TableColumn
+                        fx:id="colEstado"
+                        text="Estado"
+                        prefWidth="180"/>
+
+            </columns>
+
+        </TableView>
+
+    </children>
+
+</AnchorPane>
+

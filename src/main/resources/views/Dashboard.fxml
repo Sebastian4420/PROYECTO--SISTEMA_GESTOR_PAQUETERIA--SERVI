@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0"
+            prefWidth="900.0"
+            style="-fx-background-color: #F4F7FB;"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.paqueteria.controller.DashboardController">
+
+    <children>
+
+        <!-- MENÚ LATERAL -->
+
+        <VBox prefWidth="190.0"
+              spacing="12.0"
+              style="-fx-background-color: #E8EFF8;
+                     -fx-border-color: transparent #D7E0EC transparent transparent;
+                     -fx-border-width: 0 1 0 0;"
+              AnchorPane.topAnchor="0.0"
+              AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0">
+
+            <padding>
+                <Insets top="28.0"
+                        right="20.0"
+                        bottom="25.0"
+                        left="20.0"/>
+            </padding>
+
+            <children>
+
+                <Label text="PAQUETERÍA"
+                       style="-fx-text-fill: #2F4A68;
+                              -fx-font-weight: bold;">
+                    <font>
+                        <Font size="21.0"/>
+                    </font>
+                </Label>
+
+                <Label text="Panel administrativo"
+                       style="-fx-text-fill: #73869C;">
+                    <font>
+                        <Font size="12.0"/>
+                    </font>
+                </Label>
+
+                <Label text="MENÚ PRINCIPAL"
+                       style="-fx-text-fill: #8A9AAF;
+                              -fx-font-weight: bold;
+                              -fx-padding: 25 0 5 3;">
+                    <font>
+                        <Font size="11.0"/>
+                    </font>
+                </Label>
+
+                <Button fx:id="btnInicio"
+                        maxWidth="Infinity"
+                        prefHeight="42.0"
+                        mnemonicParsing="false"
+                        onAction="#mostrarInicio"
+                        text="Inicio"
+                        style="-fx-background-color: #FFFFFF;
+                               -fx-text-fill: #36516F;
+                               -fx-font-size: 14px;
+                               -fx-alignment: CENTER_LEFT;
+                               -fx-padding: 0 0 0 18;
+                               -fx-background-radius: 9;
+                               -fx-cursor: hand;"/>
+
+                <Button fx:id="btnClientes"
+                        maxWidth="Infinity"
+                        prefHeight="42.0"
+                        mnemonicParsing="false"
+                        onAction="#mostrarClientes"
+                        text="Clientes"
+                        style="-fx-background-color: transparent;
+                               -fx-text-fill: #48627D;
+                               -fx-font-size: 14px;
+                               -fx-alignment: CENTER_LEFT;
+                               -fx-padding: 0 0 0 18;
+                               -fx-background-radius: 9;
+                               -fx-cursor: hand;"/>
+
+                <Button fx:id="btnRepartidores"
+                        maxWidth="Infinity"
+                        prefHeight="42.0"
+                        mnemonicParsing="false"
+                        onAction="#mostrarRepartidores"
+                        text="Repartidores"
+                        style="-fx-background-color: transparent;
+                               -fx-text-fill: #48627D;
+                               -fx-font-size: 14px;
+                               -fx-alignment: CENTER_LEFT;
+                               -fx-padding: 0 0 0 18;
+                               -fx-background-radius: 9;
+                               -fx-cursor: hand;"/>
+
+                <Button fx:id="btnUsuarios"
+                        maxWidth="Infinity"
+                        prefHeight="42.0"
+                        mnemonicParsing="false"
+                        onAction="#mostrarUsuarios"
+                        text="Usuarios"
+                        style="-fx-background-color: transparent;
+                               -fx-text-fill: #48627D;
+                               -fx-font-size: 14px;
+                               -fx-alignment: CENTER_LEFT;
+                               -fx-padding: 0 0 0 18;
+                               -fx-background-radius: 9;
+                               -fx-cursor: hand;"/>
+
+                <Button fx:id="btnPaquetes"
+                        maxWidth="Infinity"
+                        prefHeight="42.0"
+                        mnemonicParsing="false"
+                        onAction="#mostrarPaquetes"
+                        text="Paquetes"
+                        style="-fx-background-color: transparent;
+                               -fx-text-fill: #48627D;
+                               -fx-font-size: 14px;
+                               -fx-alignment: CENTER_LEFT;
+                               -fx-padding: 0 0 0 18;
+                               -fx-background-radius: 9;
+                               -fx-cursor: hand;"/>
+
+                <Button fx:id="btnHistorial"
+                        maxWidth="Infinity"
+                        prefHeight="42.0"
+                        mnemonicParsing="false"
+                        onAction="#mostrarHistorial"
+                        text="Historial"
+                        style="-fx-background-color: transparent;
+                               -fx-text-fill: #48627D;
+                               -fx-font-size: 14px;
+                               -fx-alignment: CENTER_LEFT;
+                               -fx-padding: 0 0 0 18;
+                               -fx-background-radius: 9;
+                               -fx-cursor: hand;"/>
+
+                <Button fx:id="btnCerrarSesion"
+                        maxWidth="Infinity"
+                        prefHeight="42.0"
+                        mnemonicParsing="false"
+                        onAction="#cerrarSesion"
+                        text="Cerrar sesión"
+                        style="-fx-background-color: #FCE8E8;
+                               -fx-text-fill: #B65252;
+                               -fx-font-size: 14px;
+                               -fx-font-weight: bold;
+                               -fx-alignment: CENTER_LEFT;
+                               -fx-padding: 0 0 0 18;
+                               -fx-background-radius: 9;
+                               -fx-cursor: hand;
+                               -fx-translate-y: 22;"/>
+
+            </children>
+
+        </VBox>
+
+        <!-- ENCABEZADO SUPERIOR -->
+
+        <HBox alignment="CENTER_LEFT"
+              prefHeight="75.0"
+              spacing="20.0"
+              style="-fx-background-color: #FFFFFF;
+                     -fx-border-color: transparent transparent #E2E8F0 transparent;
+                     -fx-border-width: 0 0 1 0;"
+              AnchorPane.topAnchor="0.0"
+              AnchorPane.leftAnchor="190.0"
+              AnchorPane.rightAnchor="0.0">
+
+            <padding>
+                <Insets left="28.0"
+                        right="28.0"/>
+            </padding>
+
+            <children>
+
+                <VBox spacing="3.0">
+
+                    <children>
+
+                        <Label text="Sistema de Gestión de Paquetería"
+                               style="-fx-text-fill: #243B53;
+                                      -fx-font-weight: bold;">
+                            <font>
+                                <Font size="22.0"/>
+                            </font>
+                        </Label>
+
+                        <Label text="Administración y control de envíos"
+                               style="-fx-text-fill: #8293A7;">
+                            <font>
+                                <Font size="12.0"/>
+                            </font>
+                        </Label>
+
+                    </children>
+
+                </VBox>
+
+            </children>
+
+        </HBox>
+
+        <!-- PANEL PRINCIPAL -->
+
+        <AnchorPane fx:id="panelPrincipal"
+                    minHeight="400.0"
+                    minWidth="550.0"
+                    prefHeight="530.0"
+                    prefWidth="670.0"
+                    style="-fx-background-color: #FFFFFF;
+                           -fx-background-radius: 14;
+                           -fx-border-color: #E1E8F0;
+                           -fx-border-radius: 14;
+                           -fx-border-width: 1;"
+                    AnchorPane.topAnchor="95.0"
+                    AnchorPane.bottomAnchor="20.0"
+                    AnchorPane.leftAnchor="215.0"
+                    AnchorPane.rightAnchor="20.0">
+
+            <children>
+
+                <VBox alignment="CENTER"
+                      spacing="14.0"
+                      AnchorPane.topAnchor="0.0"
+                      AnchorPane.bottomAnchor="0.0"
+                      AnchorPane.leftAnchor="0.0"
+                      AnchorPane.rightAnchor="0.0">
+
+                    <children>
+
+                        <Label text="BIENVENIDO"
+                               style="-fx-text-fill: #304E6C;
+                                      -fx-font-weight: bold;">
+                            <font>
+                                <Font size="27.0"/>
+                            </font>
+                        </Label>
+
+                        <Label fx:id="lblUsuario"
+                               text="Usuario"
+                               style="-fx-background-color: #EAF2FB;
+                                      -fx-background-radius: 18;
+                                      -fx-padding: 9 20 9 20;
+                                      -fx-text-fill: #3D6286;
+                                      -fx-font-weight: bold;">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </Label>
+
+                        <Label text="Seleccione una opción del menú para comenzar."
+                               style="-fx-text-fill: #7A8DA3;">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </Label>
+
+                    </children>
+
+                </VBox>
+
+            </children>
+
+        </AnchorPane>
+
+    </children>
+
+</AnchorPane>

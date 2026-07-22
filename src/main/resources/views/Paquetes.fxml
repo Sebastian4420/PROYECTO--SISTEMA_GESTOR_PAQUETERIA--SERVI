@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0"
+            prefWidth="1100.0"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.paqueteria.controller.PaqueteController">
+
+    <children>
+
+        <!-- TÍTULO -->
+
+        <Label layoutX="350.0"
+               layoutY="20.0"
+               text="GESTIÓN DE PAQUETES">
+
+            <font>
+                <Font name="System Bold" size="28"/>
+            </font>
+
+        </Label>
+
+        <!-- ===================== -->
+        <!-- DATOS DEL PAQUETE -->
+        <!-- ===================== -->
+
+        <Label layoutX="35" layoutY="80" text="Código"/>
+
+        <TextField fx:id="txtCodigo"
+                   layoutX="35"
+                   layoutY="100"
+                   prefWidth="170"
+                   editable="false"/>
+
+        <Label layoutX="235" layoutY="80" text="Cliente"/>
+
+        <ComboBox fx:id="cbCliente"
+                  layoutX="235"
+                  layoutY="100"
+                  prefWidth="250"/>
+
+        <Label layoutX="520" layoutY="80" text="Repartidor"/>
+
+        <ComboBox fx:id="cbRepartidor"
+                  layoutX="520"
+                  layoutY="100"
+                  prefWidth="250"/>
+
+        <Label layoutX="805" layoutY="80" text="Tipo de envío"/>
+
+        <ComboBox fx:id="cbTipoEnvio"
+                  layoutX="805"
+                  layoutY="100"
+                  prefWidth="230"/>
+
+        <!-- ===================== -->
+
+        <Label layoutX="35" layoutY="160" text="Estado"/>
+
+        <ComboBox fx:id="cbEstado"
+                  layoutX="35"
+                  layoutY="180"
+                  prefWidth="170"/>
+
+        <Label layoutX="235" layoutY="160" text="Destinatario"/>
+
+        <TextField fx:id="txtDestinatario"
+                   layoutX="235"
+                   layoutY="180"
+                   prefWidth="250"/>
+
+        <Label layoutX="520" layoutY="160" text="Teléfono"/>
+
+        <TextField fx:id="txtTelefonoDestinatario"
+                   layoutX="520"
+                   layoutY="180"
+                   prefWidth="180"/>
+
+        <!-- ===================== -->
+
+        <Label layoutX="35" layoutY="240" text="Origen"/>
+
+        <TextField fx:id="txtOrigen"
+                   layoutX="35"
+                   layoutY="260"
+                   prefWidth="300"/>
+
+        <Label layoutX="370" layoutY="240" text="Destino"/>
+
+        <TextField fx:id="txtDestino"
+                   layoutX="370"
+                   layoutY="260"
+                   prefWidth="300"/>
+
+        <Label layoutX="705" layoutY="240" text="Peso (Kg)"/>
+
+        <TextField fx:id="txtPeso"
+                   layoutX="705"
+                   layoutY="260"
+                   prefWidth="120"/>
+
+        <Label layoutX="860" layoutY="240" text="Precio"/>
+
+        <TextField fx:id="txtPrecio"
+                   layoutX="860"
+                   layoutY="260"
+                   prefWidth="120"/>
+
+        <!-- ===================== -->
+        <!-- BOTONES -->
+        <!-- ===================== -->
+
+        <Button fx:id="btnGuardar"
+                layoutX="120"
+                layoutY="330"
+                prefWidth="120"
+                text="Guardar"
+                onAction="#guardarPaquete"/>
+
+        <Button fx:id="btnActualizar"
+                layoutX="290"
+                layoutY="330"
+                prefWidth="120"
+                text="Actualizar"
+                onAction="#actualizarPaquete"/>
+
+        <Button fx:id="btnEliminar"
+                layoutX="460"
+                layoutY="330"
+                prefWidth="120"
+                text="Eliminar"
+                onAction="#eliminarPaquete"/>
+
+        <Button fx:id="btnLimpiar"
+                layoutX="630"
+                layoutY="330"
+                prefWidth="120"
+                text="Limpiar"
+                onAction="#limpiarCampos"/>
+
+        <Separator layoutX="20"
+                   layoutY="390"
+                   prefWidth="1050"/>
+
+        <!-- ===================== -->
+        <!-- TABLA -->
+        <!-- ===================== -->
+
+        <TableView fx:id="tablaPaquetes"
+                   layoutX="20"
+                   layoutY="410"
+                   prefHeight="280"
+                   prefWidth="1050">
+
+            <columns>
+
+                <TableColumn fx:id="colCodigo"
+                             text="Código"
+                             prefWidth="120"/>
+
+                <TableColumn fx:id="colCliente"
+                             text="Cliente"
+                             prefWidth="220"/>
+
+                <TableColumn fx:id="colRepartidor"
+                             text="Repartidor"
+                             prefWidth="180"/>
+
+                <TableColumn fx:id="colDestino"
+                             text="Destino"
+                             prefWidth="180"/>
+
+                <TableColumn fx:id="colEstado"
+                             text="Estado"
+                             prefWidth="150"/>
+
+                <TableColumn fx:id="colPrecio"
+                             text="Precio"
+                             prefWidth="120"/>
+
+            </columns>
+
+        </TableView>
+
+    </children>
+
+</AnchorPane>

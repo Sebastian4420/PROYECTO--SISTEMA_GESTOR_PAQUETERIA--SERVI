@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0"
+            prefWidth="900.0"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.paqueteria.controller.HistorialController">
+
+    <children>
+
+        <!-- TÍTULO -->
+
+        <Label layoutX="290.0"
+               layoutY="20.0"
+               text="HISTORIAL DE ESTADOS">
+
+            <font>
+                <Font name="System Bold" size="26.0"/>
+            </font>
+
+        </Label>
+
+        <!-- DATOS -->
+
+        <Label layoutX="55.0"
+               layoutY="90.0"
+               text="Paquete"/>
+
+        <ComboBox fx:id="cbPaquete"
+                  layoutX="55.0"
+                  layoutY="115.0"
+                  prefWidth="260.0"/>
+
+        <Label layoutX="355.0"
+               layoutY="90.0"
+               text="Estado"/>
+
+        <ComboBox fx:id="cbEstado"
+                  layoutX="355.0"
+                  layoutY="115.0"
+                  prefWidth="220.0"/>
+
+        <Label layoutX="615.0"
+               layoutY="90.0"
+               text="Fecha"/>
+
+        <TextField fx:id="txtFecha"
+                   layoutX="615.0"
+                   layoutY="115.0"
+                   prefWidth="220.0"
+                   editable="false"/>
+
+        <Label layoutX="55.0"
+               layoutY="175.0"
+               text="Observación"/>
+
+        <TextArea fx:id="txtObservacion"
+                  layoutX="55.0"
+                  layoutY="200.0"
+                  prefWidth="780.0"
+                  prefHeight="90.0"
+                  wrapText="true"/>
+
+        <!-- BOTONES -->
+
+        <Button fx:id="btnGuardar"
+                layoutX="110.0"
+                layoutY="325.0"
+                prefWidth="130.0"
+                text="Guardar"
+                onAction="#guardarHistorial"/>
+
+        <Button fx:id="btnActualizar"
+                layoutX="290.0"
+                layoutY="325.0"
+                prefWidth="130.0"
+                text="Actualizar"
+                onAction="#actualizarHistorial"/>
+
+        <Button fx:id="btnEliminar"
+                layoutX="470.0"
+                layoutY="325.0"
+                prefWidth="130.0"
+                text="Eliminar"
+                onAction="#eliminarHistorial"/>
+
+        <Button fx:id="btnLimpiar"
+                layoutX="650.0"
+                layoutY="325.0"
+                prefWidth="130.0"
+                text="Limpiar"
+                onAction="#limpiarCampos"/>
+
+        <Separator layoutX="35.0"
+                   layoutY="380.0"
+                   prefWidth="830.0"/>
+
+        <!-- TABLA -->
+
+        <TableView fx:id="tablaHistorial"
+                   layoutX="35.0"
+                   layoutY="400.0"
+                   prefWidth="830.0"
+                   prefHeight="215.0">
+
+            <columns>
+
+                <TableColumn fx:id="colId"
+                             text="ID"
+                             prefWidth="55.0"/>
+
+                <TableColumn fx:id="colPaquete"
+                             text="Paquete"
+                             prefWidth="180.0"/>
+
+                <TableColumn fx:id="colEstado"
+                             text="Estado"
+                             prefWidth="160.0"/>
+
+                <TableColumn fx:id="colFecha"
+                             text="Fecha"
+                             prefWidth="190.0"/>
+
+                <TableColumn fx:id="colObservacion"
+                             text="Observación"
+                             prefWidth="240.0"/>
+
+            </columns>
+
+        </TableView>
+
+    </children>
+
+</AnchorPane>
